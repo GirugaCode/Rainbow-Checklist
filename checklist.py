@@ -22,7 +22,7 @@ def list_all_items():
         index += 1
 
 def mark_completed(index):
-    checklist[int(index)] = "{}{}".format("√", checklist[index])
+    checklist[int(index)] = "{}{}".format("√", checklist[int(index)])
     # update(index, "{}{}".format("√", checklist[index])
 
 def user_input(prompt):
@@ -47,6 +47,7 @@ def select(function_code):
 
     elif function_code == "U":
         # update item
+        item_index = user_input("Index number?: ")
         update(index_item)
     elif function_code == "C":
         # Mark as complete
