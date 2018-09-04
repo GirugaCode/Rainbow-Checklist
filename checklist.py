@@ -10,7 +10,7 @@ def read(index):
     return checklist[index]
 
 def update(index, item):
-    checklist[index] = item
+    checklist[int(index)] = str(item)
 
 def destroy (index):
     checklist.pop(int(index))
@@ -47,8 +47,13 @@ def select(function_code):
 
     elif function_code == "U":
         # update item
+
         item_index = user_input("Index number?: ")
-        update(index_item)
+        input_item = user_input("Input Item: ")
+        update(item_index, input_item)
+
+
+
     elif function_code == "C":
         # Mark as complete
         item_index = user_input("Which index number did you want to check off?: ")
@@ -66,21 +71,21 @@ def select(function_code):
         print("Unknown Option")
     return True
 
-def test():
-    create("purple sox")
-    create("red cloak")
-
-    print(read(0))
-    print(read(1))
-
-    update(0, "purple socks")
-    destroy(1)
-
-    print(read(0))
-
-
-# Run Tests
-test()
+# def test():
+#     create("purple sox")
+#     create("red cloak")
+#
+#     print(read(0))
+#     print(read(1))
+#
+#     update(0, "purple socks")
+#     destroy(1)
+#
+#     print(read(0))
+#
+#
+# # Run Tests
+# test()
 
 running = True
 while running:
