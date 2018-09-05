@@ -47,7 +47,6 @@ def select(function_code):
 
     elif function_code == "U":
         # update item
-
         item_index = user_input("Index number?: ")
         input_item = user_input("Input Item: ")
         update(item_index, input_item)
@@ -64,7 +63,7 @@ def select(function_code):
 
     elif function_code == "Q":
         # This is where we want to stop our loop
-        return false
+        return False
 
     else:
         # Catch all
